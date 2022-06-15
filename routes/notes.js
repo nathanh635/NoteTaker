@@ -33,7 +33,7 @@ notes.post('/', (req, res) => {
 notes.delete('/:id', (req, res) => {
     console.info(`${req.method} request received to delete a note`);
   
-    const {id} = req.body;
+    const id = req.params.id;
   
     if (id!="") {
         
