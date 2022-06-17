@@ -31,18 +31,22 @@ const readAndAppend = (content, file) => {
   });
 };
 
+//function to delete existing notes
 const remove = (content, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
     } else {
+      //parse the data
       const parsedData = JSON.parse(data);
+
+      //loop through the data, and when you find a note with the ID that matches the provided ID, splice it out
       for (let i = 0; i<parsedData.length; i++) {
         if (content ===parsedData[i].id) {
           parsedData.splice(i,1)
         }
       }
-
+//write the updated array to the file.
       writeToFile(file, parsedData);
     }
   });

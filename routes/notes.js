@@ -36,7 +36,7 @@ notes.delete('/:id', (req, res) => {
     const id = req.params.id;
   
     if (id!="") {
-        
+        //added the remove method to the FS sheet
       remove(id, './db/db.json');
       res.json(`Note deleted`);
     } else {
