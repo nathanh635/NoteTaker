@@ -3,7 +3,9 @@
 
   ## Description
 
-  The application is designed to take input from the user for a note's title and body, and save it to a json file. The application also includes a delete function to delete notes.
+  The application is designed to take input from the user for a note's title and body, and save it to a json file. The note is given a unique ID, and the ID, title, and text are written to a json file.
+  
+  The application also includes a delete function to delete notes. The delete function matches the id of the note clicked with the id within the json file, and removes it from the file before rewriting the new array to the file.
 
 ## Table of Contents
 
@@ -18,7 +20,7 @@
 
   ## Installation
 
-  the application requires express.js to run.
+  The application requires express.js to run locally.
 
   ## Usage
 
@@ -45,14 +47,13 @@
   
     ## Screenshots
 
-  Below are some screenshots of the application running and the generated README.md file. The example readme is also available as "./exampleREADME.md".
+  Below is a screenshot of the deployed page.
 
-![license prompt](./assets/images/prompts-licenses.PNG)
-![completed prompts](./assets/images/completed-prompts.PNG)
-![generated readme](./assets/images/readme-generated.PNG)
+![deployed page](./assets/images/screenshot.PNG)
   
 ## Links
 
-  Repository: https://github.com/nathanh635/README-Generator
-  Heroku: 
+  Repository: https://github.com/nathanh635/NoteTaker
+  
+  Heroku Deployment: https://fathomless-dawn-24182.herokuapp.com/notes
 
